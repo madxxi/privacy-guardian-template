@@ -1,0 +1,28 @@
+jurisdiction: MX
+label: "Mexico — LFPDPPP"
+country_code: MX
+
+frameworks:
+
+  - code: MX_LFPDPPP
+    name: "Ley Federal de Protección de Datos Personales en Posesión de los Particulares"
+    statute: "LFPDPPP (2010)"
+    applies_to: "Private parties processing personal data of Mexican residents"
+    rights:
+      - "ARCO Rights: Acceso, Rectificación, Cancelación, Oposición"
+      - "Right of Access — see what data is held"
+      - "Right of Rectification — correct inaccurate data"
+      - "Right of Cancellation — deletion of data"
+      - "Right of Opposition — object to processing"
+    response_deadline: "20 business days"
+    enforcement:
+      - agency: "Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales (INAI)"
+        url: "https://home.inai.org.mx"
+    private_right_of_action: false
+    citation_template: >
+      De conformidad con la Ley Federal de Protección de Datos Personales en
+      Posesión de los Particulares (LFPDPPP), ejerciendo mis derechos ARCO
+      solicito la cancelación de mis datos personales en un plazo de 20 días
+      hábiles. En caso de incumplimiento, presentaré queja ante el INAI.
+      [EN: Pursuant to Mexico's LFPDPPP, I exercise my ARCO rights to request
+      cancellation of my personal data within 20 business days.]

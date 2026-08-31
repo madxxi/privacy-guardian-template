@@ -1,0 +1,27 @@
+jurisdiction: US_VA
+label: "Virginia — State Law"
+state_code: VA
+
+frameworks:
+
+  - code: VA_CDPA
+    name: "Virginia Consumer Data Protection Act"
+    statute: "Va. Code § 59.1-575 et seq."
+    effective: "2023-01-01"
+    applies_to: "Controllers processing data of 100K+ VA consumers OR 25K+ if 50%+ revenue from data sales"
+    rights:
+      - "Right to access personal data"
+      - "Right to correct inaccuracies"
+      - "Right to delete personal data"
+      - "Right to opt out of sale and targeted advertising"
+    response_deadlines:
+      standard: "45 days (extendable by 45 days)"
+    enforcement:
+      - agency: "Virginia Attorney General"
+        url: "https://www.oag.state.va.us"
+    damages: "Civil penalty up to $7,500 per violation"
+    private_right_of_action: false
+    citation_template: >
+      Pursuant to the Virginia Consumer Data Protection Act (Va. Code § 59.1-575),
+      I am exercising my right to delete my personal data. Please confirm compliance
+      within 45 days. Non-compliance may be referred to the Virginia Attorney General.

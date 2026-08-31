@@ -1,0 +1,102 @@
+# =============================================================================
+# US Federal Privacy Legal Frameworks
+# Referenced by legal_advisor.py for all US-resident profiles.
+# =============================================================================
+
+jurisdiction: US_FEDERAL
+label: "United States — Federal Law"
+
+frameworks:
+
+  - code: FCRA
+    name: "Fair Credit Reporting Act"
+    applies_to: "Consumer Reporting Agencies (CRAs): background check sites, tenant screeners, employment verifiers"
+    rights:
+      - "Right to access your consumer file"
+      - "Right to dispute inaccurate or incomplete information"
+      - "CRA must investigate within 30 days"
+      - "Negative information limits: 7 years (most), 10 years (bankruptcy)"
+    enforcement:
+      - agency: "Federal Trade Commission (FTC)"
+        url: "https://reportfraud.ftc.gov"
+      - agency: "Consumer Financial Protection Bureau (CFPB)"
+        url: "https://www.consumerfinance.gov/complaint"
+    damages: "Actual damages OR statutory $100–$1,000 per violation + punitive damages + attorney fees"
+    private_right_of_action: true
+    statute_of_limitations: "2 years from discovery; 5 years from violation"
+    citation_template: >
+      Pursuant to 15 U.S.C. § 1681 et seq. (Fair Credit Reporting Act), I hereby
+      request removal of my personal information. As a Consumer Reporting Agency,
+      you are required to maintain reasonable procedures to ensure maximum possible
+      accuracy and to respond to disputes within 30 days. Failure to comply may
+      result in civil liability including statutory damages of $100–$1,000 per
+      violation, punitive damages, and attorney fees under 15 U.S.C. § 1681n.
+
+  - code: DPPA
+    name: "Driver's Privacy Protection Act"
+    applies_to: "Any entity that obtained or uses DMV-sourced data"
+    rights:
+      - "Your DMV record may NOT be disclosed for marketing or general commercial use"
+      - "Only 14 permissible purposes exist under the statute"
+      - "Right to request what data was disclosed and to whom"
+    enforcement:
+      - agency: "US Department of Justice"
+        url: "https://www.justice.gov"
+    damages: "Actual damages OR $2,500 minimum liquidated damages per violation + punitive + attorney fees"
+    private_right_of_action: true
+    statute_of_limitations: "4 years"
+    citation_template: >
+      Pursuant to 18 U.S.C. § 2721 et seq. (Driver's Privacy Protection Act),
+      the disclosure of my motor vehicle record information for marketing or
+      general commercial purposes is expressly prohibited. I demand immediate
+      removal of any DMV-sourced personal information. Each disclosure constitutes
+      a separate violation subject to minimum liquidated damages of $2,500.
+
+  - code: GLBA
+    name: "Gramm-Leach-Bliley Act"
+    applies_to: "Financial institutions sharing consumer financial data"
+    rights:
+      - "Right to opt out of information sharing with non-affiliated third parties"
+      - "Right to receive a privacy notice annually"
+    enforcement:
+      - agency: "CFPB / FTC depending on entity type"
+        url: "https://www.consumerfinance.gov/complaint"
+    damages: "No private right of action; regulatory enforcement only"
+    private_right_of_action: false
+    citation_template: >
+      Pursuant to 15 U.S.C. § 6801 et seq. (Gramm-Leach-Bliley Act), I am
+      exercising my right to opt out of the sharing of my personal financial
+      information with non-affiliated third parties. Please confirm in writing
+      that my opt-out has been processed and that my data will not be further
+      shared or sold.
+
+  - code: COPPA
+    name: "Children's Online Privacy Protection Act"
+    applies_to: "Online services collecting data on children under 13"
+    notes: "Cite only if minor children's data is found on broker sites."
+    private_right_of_action: false
+
+  - code: HIPAA
+    name: "Health Insurance Portability and Accountability Act"
+    applies_to: "Covered entities and business associates handling protected health information"
+    notes: "Cite if health data is found on a broker site sourced from a covered entity."
+    enforcement:
+      - agency: "HHS Office for Civil Rights"
+        url: "https://www.hhs.gov/hipaa/filing-a-complaint"
+    private_right_of_action: false
+
+  - code: FTCA_5
+    name: "FTC Act Section 5 — Unfair or Deceptive Acts"
+    applies_to: "Any commercial entity engaging in deceptive data practices"
+    rights:
+      - "FTC can take enforcement action against brokers misrepresenting privacy practices"
+    enforcement:
+      - agency: "FTC"
+        url: "https://reportfraud.ftc.gov"
+    private_right_of_action: false
+    citation_template: >
+      Pursuant to Section 5 of the Federal Trade Commission Act (15 U.S.C. § 45),
+      the collection, maintenance, and sale of my personal information without
+      adequate disclosure or a legitimate opt-out mechanism may constitute an
+      unfair or deceptive trade practice. I am filing a concurrent complaint with
+      the FTC and request immediate removal of my data.

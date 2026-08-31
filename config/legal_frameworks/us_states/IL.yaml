@@ -1,0 +1,32 @@
+jurisdiction: US_IL
+label: "Illinois — State Law"
+state_code: IL
+
+frameworks:
+
+  - code: IL_BIPA
+    name: "Biometric Information Privacy Act"
+    statute: "740 ILCS 14"
+    applies_to: "Any entity collecting/storing biometric identifiers (fingerprints, face scans, etc.)"
+    rights:
+      - "Informed written consent required before collection"
+      - "Right to have data destroyed"
+    damages: "$1,000–$5,000 per violation + attorney fees"
+    private_right_of_action: true
+    citation_template: >
+      Pursuant to the Illinois Biometric Information Privacy Act (740 ILCS 14),
+      I demand immediate destruction of any biometric identifiers or biometric
+      information collected from me or derived from images of me without my
+      written consent. Each violation subjects you to $1,000–$5,000 statutory
+      damages plus attorney fees in a private right of action.
+
+  - code: IL_PIPA
+    name: "Personal Information Protection Act"
+    statute: "815 ILCS 530"
+    applies_to: "Data collectors holding Illinois resident information"
+    rights:
+      - "Mandatory breach notification"
+    enforcement:
+      - agency: "Illinois Attorney General"
+        url: "https://illinoisattorneygeneral.gov"
+    private_right_of_action: false

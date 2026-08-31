@@ -1,0 +1,33 @@
+jurisdiction: AU
+label: "Australia — Privacy Act 1988"
+country_code: AU
+
+frameworks:
+
+  - code: AU_PRIVACY_ACT
+    name: "Privacy Act 1988 — Australian Privacy Principles"
+    statute: "Privacy Act 1988 (Cth); APPs 1–13"
+    applies_to: "Australian Government agencies and private sector organisations with turnover > AUD 3M"
+    rights:
+      - "Right to access personal information (APP 12)"
+      - "Right to correct inaccurate information (APP 13)"
+      - "Right to complain about interference with privacy"
+    response_deadline: "30 days for access requests"
+    enforcement:
+      - agency: "Office of the Australian Information Commissioner (OAIC)"
+        url: "https://www.oaic.gov.au/privacy/privacy-complaints/lodge-a-privacy-complaint-with-us"
+    damages: "Civil penalties up to AUD 50M per serious/repeated interference"
+    private_right_of_action: false
+    citation_template: >
+      Pursuant to the Privacy Act 1988 (Cth) and the Australian Privacy Principles,
+      I request access to and deletion of all personal information you hold about me.
+      Please respond within 30 days as required by APP 12. Non-compliance will be
+      referred to the Office of the Australian Information Commissioner.
+
+  - code: AU_PRIVACY_ACT_2024
+    name: "Privacy Act Reform (2024 Amendments)"
+    statute: "Privacy and Other Legislation Amendment Act 2024"
+    notes: >
+      Significant amendments passed in 2024 including: right to erasure (proposed),
+      direct right of action (under review), stronger enforcement. Monitor OAIC
+      guidance for full implementation timeline.

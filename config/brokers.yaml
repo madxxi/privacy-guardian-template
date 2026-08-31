@@ -1,0 +1,615 @@
+# =============================================================================
+# privacy-guardian — brokers.yaml
+# =============================================================================
+# Known data brokers with search URLs, opt-out instructions, and legal flags.
+# Placeholders: {first} {last} {city} {state} {zip}
+# legal_basis: CCPA | FCRA | GLBA | FL_DPPA | FL_PRA | NONE
+# optout_method: form | email | mail | phone | unknown
+# compliant: true = has a working opt-out process; false = no clear process
+# phone: customer support / privacy department number (leave blank if unknown)
+#        Format: "(800) 555-1234" — include area code, no country prefix needed
+# =============================================================================
+
+brokers:
+
+  # ── TIER 1: Highest-traffic / most-likely-to-have-your-data ──────────────
+
+  - name: "Spokeo"
+    url: "https://www.spokeo.com/{first}-{last}/{state}"
+    optout_url: "https://www.spokeo.com/optout"
+    optout_method: form
+    phone: "(888) 906-0850"
+    legal_basis: CCPA
+    compliant: true
+    notes: "Requires email confirmation. Submit once per listing found."
+
+  - name: "Whitepages"
+    url: "https://www.whitepages.com/name/{first}-{last}/{city}-{state}"
+    optout_url: "https://www.whitepages.com/privacy/consumer-rights"
+    optout_method: form
+    phone: "(800) 916-7806"
+    legal_basis: CCPA
+    compliant: true
+    notes: "Phone verification required. One record at a time."
+
+  - name: "BeenVerified"
+    url: "https://www.beenverified.com/people/{first}-{last}"
+    optout_url: "https://www.beenverified.com/app/optout/search"
+    optout_method: form
+    phone: "(888) 579-5910"
+    legal_basis: FCRA
+    compliant: true
+    notes: "FCRA-covered. Must provide email; 24-48hr removal."
+
+  - name: "Intelius"
+    url: "https://www.intelius.com/people-search/results?fn={first}&ln={last}&city={city}&state={state}"
+    optout_url: "https://www.intelius.com/opt-out"
+    optout_method: form
+    phone: "(888) 245-8812"
+    legal_basis: FCRA
+    compliant: true
+    notes: "Parent company: PeopleConnect. One opt-out covers TruthFinder too."
+
+  - name: "TruthFinder"
+    url: "https://www.truthfinder.com/people-search/?firstName={first}&lastName={last}&state={state}&city={city}"
+    optout_url: "https://www.truthfinder.com/opt-out/"
+    optout_method: form
+    phone: "(800) 699-8081"
+    legal_basis: FCRA
+    compliant: true
+    notes: "Same PeopleConnect umbrella as Intelius. Confirm separately."
+
+  - name: "MyLife"
+    url: "https://www.mylife.com/pub/search?search[first_name]={first}&search[last_name]={last}&search[state]={state}"
+    optout_url: "https://www.mylife.com/privacy/delete-my-information.jsp"
+    optout_method: form
+    phone: "(888) 704-1900"
+    legal_basis: CCPA
+    compliant: true
+    notes: "Also sends marketing. Opt-out from both data and email."
+
+  - name: "PeopleFinders"
+    url: "https://www.peoplefinders.com/people/{first}-{last}/{state}"
+    optout_url: "https://www.peoplefinders.com/opt-out"
+    optout_method: form
+    phone: "(800) 718-8997"
+    legal_basis: CCPA
+    compliant: true
+    notes: ""
+
+  - name: "Radaris"
+    url: "https://radaris.com/p/{first}-{last}"
+    optout_url: "https://radaris.com/control/privacy"
+    optout_method: form
+    phone: ""
+    legal_basis: CCPA
+    compliant: true
+    notes: "May require creating an account to opt out."
+
+  - name: "FastPeopleSearch"
+    url: "https://www.fastpeoplesearch.com/name/{first}-{last}_{state}"
+    optout_url: "https://www.fastpeoplesearch.com/removal"
+    optout_method: form
+    phone: ""
+    legal_basis: CCPA
+    compliant: true
+    notes: "Fast turnaround, usually same day."
+
+  - name: "USPhoneBook"
+    url: "https://www.usphonebook.com/{first}-{last}/{city}-{state}"
+    optout_url: "https://www.usphonebook.com/opt-out"
+    optout_method: form
+    phone: ""
+    legal_basis: CCPA
+    compliant: true
+    notes: ""
+
+  - name: "411.com"
+    url: "https://www.411.com/name/{first}-{last}/{state}"
+    optout_url: "https://www.whitepages.com/privacy/consumer-rights"
+    optout_method: form
+    phone: "(800) 916-7806"
+    legal_basis: CCPA
+    compliant: true
+    notes: "Operated by Whitepages. Online opt-out form may fail — call if needed."
+
+  - name: "Zabasearch"
+    url: "https://www.zabasearch.com/people/{first}+{last}/{state}/"
+    optout_url: "https://www.zabasearch.com/block_records/"
+    optout_method: form
+    phone: ""
+    legal_basis: CCPA
+    compliant: true
+    notes: ""
+
+  - name: "PeopleSmart"
+    url: "https://www.peoplesmart.com/people-search/results?fname={first}&lname={last}&state={state}"
+    optout_url: "https://www.peoplesmart.com/opt-out"
+    optout_method: form
+    phone: "(888) 579-5910"
+    legal_basis: FCRA
+    compliant: true
+    notes: "BeenVerified subsidiary — same support number."
+
+  - name: "Instant Checkmate"
+    url: "https://www.instantcheckmate.com/people/{first}-{last}"
+    optout_url: "https://www.instantcheckmate.com/opt-out/"
+    optout_method: form
+    phone: "(800) 222-8985"
+    legal_basis: FCRA
+    compliant: true
+    notes: "PeopleConnect umbrella."
+
+  - name: "CheckPeople"
+    url: "https://www.checkpeople.com/people/{first}-{last}/{city}-{state}"
+    optout_url: "https://www.checkpeople.com/opt-out"
+    optout_method: form
+    phone: ""
+    legal_basis: CCPA
+    compliant: true
+    notes: ""
+
+  # ── TIER 2: Aggregators and specialty brokers ────────────────────────────
+
+  - name: "Acxiom"
+    url: "https://www.acxiom.com/about-acxiom/privacy/us-products-privacy-form/"
+    optout_url: "https://www.acxiom.com/about-acxiom/privacy/us-products-privacy-form/"
+    optout_method: form
+    phone: "(877) 774-2094"
+    legal_basis: CCPA
+    compliant: true
+    notes: "Large B2B data broker. Opt-out via consumer form."
+
+  - name: "Epsilon"
+    url: ""
+    optout_url: "https://www.epsilon.com/us/privacy-policy/opt-out"
+    optout_method: form
+    phone: "(800) 309-0505"
+    legal_basis: CCPA
+    compliant: true
+    notes: "Major marketing data broker. No public search; opt-out by name/email."
+
+  - name: "LexisNexis Risk Solutions"
+    url: ""
+    optout_url: "https://optout.lexisnexis.com/"
+    optout_method: form
+    phone: "(800) 831-2578"
+    legal_basis: FCRA
+    compliant: true
+    notes: "FCRA-covered. Separate from LexisNexis legal research platform."
+
+  - name: "CoreLogic"
+    url: ""
+    optout_url: "https://optout.corelogic.com/"
+    optout_method: form
+    phone: "(877) 532-8778"
+    legal_basis: FCRA
+    compliant: true
+    notes: "Property and mortgage data. FCRA-governed."
+
+  - name: "DataLogix (Oracle)"
+    url: ""
+    optout_url: "https://datalogix.com/privacy/"
+    optout_method: form
+    phone: ""
+    legal_basis: CCPA
+    compliant: true
+    notes: "Oracle Data Cloud. Offline purchase behavior data."
+
+  - name: "Experian Marketing Services"
+    url: ""
+    optout_url: "https://www.experian.com/privacy/opting_out_of_experian_marketing.html"
+    optout_method: form
+    phone: "(800) 831-5614"
+    legal_basis: CCPA
+    compliant: true
+    notes: "Separate from Experian credit reporting (which is FCRA)."
+
+  - name: "EquifaxDirectMarketing"
+    url: ""
+    optout_url: "https://www.optoutprescreen.com/"
+    optout_method: form
+    phone: "(888) 567-8688"
+    legal_basis: FCRA
+    compliant: true
+    notes: "Pre-screened credit/insurance offers opt-out."
+
+  - name: "PeopleConnect (Umbrella)"
+    url: ""
+    optout_url: "https://www.peopleconnect.us/privacy"
+    optout_method: form
+    phone: "(888) 245-8812"
+    legal_basis: FCRA
+    compliant: true
+    notes: "Parent of Intelius, TruthFinder, Instant Checkmate, US Search."
+
+  - name: "Persopo"
+    url: "https://www.persopo.com/search?fn={first}&ln={last}&state={state}"
+    optout_url: "https://www.persopo.com/ccpa-request"
+    optout_method: form
+    phone: ""
+    legal_basis: CCPA
+    compliant: true
+    notes: ""
+
+  - name: "SearchPeopleFree"
+    url: "https://www.searchpeoplefree.com/find/{first}-{last}/{state}"
+    optout_url: "https://www.searchpeoplefree.com/opt-out"
+    optout_method: form
+    phone: ""
+    legal_basis: CCPA
+    compliant: true
+    notes: ""
+
+  - name: "PrivateEye"
+    url: "https://www.privateeye.com/people/{first}-{last}"
+    optout_url: "https://www.privateeye.com/privacy/request"
+    optout_method: form
+    phone: ""
+    legal_basis: CCPA
+    compliant: true
+    notes: ""
+
+  - name: "PublicRecordsNow"
+    url: "https://www.publicrecordsnow.com/people/{first}-{last}/{state}"
+    optout_url: "https://www.publicrecordsnow.com/static/view/optout"
+    optout_method: form
+    phone: ""
+    legal_basis: CCPA
+    compliant: true
+    notes: ""
+
+  - name: "Pipl"
+    url: ""
+    optout_url: "https://pipl.com/personal-information-removal-request"
+    optout_method: form
+    phone: ""
+    legal_basis: CCPA
+    compliant: true
+    notes: "B2B identity data. No public search; submit removal by email."
+
+  - name: "Veromi"
+    url: "https://www.veromi.net/people/{first}-{last}"
+    optout_url: "https://www.veromi.net/RemoveInfo.aspx"
+    optout_method: form
+    phone: ""
+    legal_basis: CCPA
+    compliant: true
+    notes: ""
+
+  - name: "USA People Search"
+    url: "https://www.usa-people-search.com/people/{first}-{last}/{state}"
+    optout_url: "https://www.usa-people-search.com/manage"
+    optout_method: form
+    phone: ""
+    legal_basis: CCPA
+    compliant: true
+    notes: ""
+
+  # ── TIER 3: No clear opt-out process — legal escalation candidates ───────
+
+  - name: "ThatsThem"
+    url: "https://thatsthem.com/name/{first}-{last}"
+    optout_url: "https://thatsthem.com/optout"
+    optout_method: form
+    phone: ""
+    legal_basis: CCPA
+    compliant: true
+    notes: ""
+
+  - name: "ClustrMaps"
+    url: "https://clustrmaps.com/persons/{first}-{last}"
+    optout_url: "https://clustrmaps.com/bl/opt-out"
+    optout_method: form
+    phone: ""
+    legal_basis: NONE
+    compliant: false
+    notes: "No US legal basis. Flag for attorney review if found."
+
+  - name: "Xlek"
+    url: "https://xlek.com/search_name.php?name={first}+{last}&state={state}"
+    optout_url: ""
+    optout_method: unknown
+    phone: ""
+    legal_basis: NONE
+    compliant: false
+    notes: "No known opt-out. Flag for attorney review."
+
+  - name: "FamilyTreeNow"
+    url: "https://www.familytreenow.com/search/genealogy/results?first={first}&last={last}&state={state}"
+    optout_url: "https://www.familytreenow.com/optout"
+    optout_method: form
+    phone: ""
+    legal_basis: CCPA
+    compliant: true
+    notes: "Genealogy data often includes relatives. Check family associations."
+
+  - name: "Nuwber"
+    url: "https://nuwber.com/person/search?name={first}+{last}&location={city}+{state}"
+    optout_url: "https://nuwber.com/removal/link"
+    optout_method: form
+    phone: ""
+    legal_basis: CCPA
+    compliant: true
+    notes: ""
+
+  - name: "ArrestFacts"
+    url: "https://arrestfacts.com/search?firstName={first}&lastName={last}&state={state}"
+    optout_url: ""
+    optout_method: unknown
+    phone: ""
+    legal_basis: NONE
+    compliant: false
+    notes: "Arrest/court records aggregator. Flag for attorney if found."
+
+  - name: "MugshotLook"
+    url: "https://www.mugshotlook.com/search?name={first}+{last}&state={state}"
+    optout_url: ""
+    optout_method: unknown
+    phone: ""
+    legal_basis: NONE
+    compliant: false
+    notes: "State law varies. FL does not have an explicit mugshot removal statute. Attorney review recommended."
+
+  # ── FLORIDA-SPECIFIC PUBLIC RECORDS ──────────────────────────────────────
+
+  - name: "Broward County Property Appraiser"
+    url: "https://www.bcpa.net/RecInfo.asp"
+    optout_url: "https://www.bcpa.net/RecInfo.asp"
+    optout_method: mail
+    phone: "(954) 357-6830"
+    legal_basis: FL_PRA
+    compliant: true
+    notes: "Property ownership is public record in FL. Homestead confidentiality available only for law enforcement, judges, and similar protected occupations under FL 119.071. Confirm eligibility with attorney."
+
+  - name: "Broward County Clerk of Courts"
+    url: "https://www.browardclerk.org/Web2/CaseSearchECA/"
+    optout_url: ""
+    optout_method: unknown
+    phone: "(954) 831-6565"
+    legal_basis: FL_PRA
+    compliant: false
+    notes: "Court records are public. Sealing/expungement requires court petition (FL Rule 2.420). Civil records generally cannot be sealed without cause. Attorney review required."
+
+  - name: "FL Division of Elections (Voter Registration)"
+    url: "https://registration.elections.myflorida.com/CheckVoterStatus"
+    optout_url: "https://dos.myflorida.com/elections/for-voters/voter-registration/"
+    optout_method: form
+    phone: "(850) 245-6200"
+    legal_basis: FL_PRA
+    compliant: true
+    notes: "FL Statute 97.0585 allows confidentiality for certain protected individuals. General public is not eligible for full suppression, but some fields (address) can be protected for law enforcement, domestic violence victims, etc."
+
+  - name: "FL Dept of Highway Safety (DHSMV)"
+    url: ""
+    optout_url: "https://www.flhsmv.gov/driver-licenses-id-cards/privacy-concerns/"
+    optout_method: mail
+    phone: "(850) 617-2000"
+    legal_basis: FL_DPPA
+    compliant: true
+    notes: "Driver records protected under DPPA. DMV data cannot be sold for marketing. If found on a broker, that is a DPPA violation — strong legal basis."
+
+  - name: "Collier County Property Appraiser"
+    url: "https://www.collierappraiser.com/"
+    optout_url: ""
+    optout_method: unknown
+    phone: "(239) 252-8141"
+    legal_basis: FL_PRA
+    compliant: false
+    notes: "Naples-area property records. Same FL 119.071 rules as Broward. Attorney review for any suppression request."
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # INTERNATIONAL BROKERS
+  # ═══════════════════════════════════════════════════════════════════════════
+
+  # ── EUROPE (GDPR-governed) ─────────────────────────────────────────────────
+
+  - name: "Infobel (EU)"
+    url: "https://www.infobel.com/en/world/people/{first}_{last}"
+    optout_url: "https://www.infobel.com/en/world/privacy"
+    optout_method: form
+    phone: ""
+    legal_basis: EU_GDPR
+    compliant: true
+    regions: [EU, GB]
+    notes: "Pan-European directory. GDPR erasure request applies. Covers Belgium, Netherlands, Germany, France, Italy, Spain."
+
+  - name: "Das Örtliche (Germany)"
+    url: "https://www.dasoertliche.de/rubriken/telefonbuch/?kw={first}+{last}"
+    optout_url: "https://www.dasoertliche.de/datenschutz"
+    optout_method: form
+    phone: ""
+    legal_basis: EU_GDPR
+    compliant: true
+    regions: [DE]
+    notes: "German telephone directory. GDPR Article 17 erasure applies."
+
+  - name: "Pages Blanches (France)"
+    url: "https://www.pagesjaunes.fr/pagesblanches/recherche?quoiqui={first}+{last}"
+    optout_url: "https://www.pagesjaunes.fr/aide/suppression-donnees"
+    optout_method: form
+    phone: ""
+    legal_basis: EU_GDPR
+    compliant: true
+    regions: [FR]
+    notes: "French white pages. GDPR and French data protection law applies."
+
+  - name: "Pagine Bianche (Italy)"
+    url: "https://www.paginebianche.it/ricerca?qs={first}+{last}"
+    optout_url: "https://www.paginebianche.it/privacy"
+    optout_method: form
+    phone: ""
+    legal_basis: EU_GDPR
+    compliant: true
+    regions: [IT]
+    notes: "Italian directory. GDPR + Italian Garante enforcement."
+
+  - name: "Gule Sider (Norway)"
+    url: "https://www.gulesider.no/kart/#{first}%20{last}"
+    optout_url: "https://www.gulesider.no/personvern"
+    optout_method: form
+    phone: ""
+    legal_basis: EU_GDPR
+    compliant: true
+    regions: ["NO"]
+    notes: "Norwegian directory. EEA GDPR applies."
+
+  - name: "192.com (UK)"
+    url: "https://www.192.com/people/search/?search[forename]={first}&search[surname]={last}"
+    optout_url: "https://www.192.com/help/removing-details/"
+    optout_method: form
+    phone: ""
+    legal_basis: UK_GDPR
+    compliant: true
+    regions: [GB]
+    notes: "UK directory. UK GDPR + DPA 2018. ICO complaint path available."
+
+  - name: "BT Phone Book (UK)"
+    url: "https://www.thephonebook.bt.com/Person/PersonSearch/?Surname={last}&FirstName={first}"
+    optout_url: "https://www.thephonebook.bt.com/ExDirectory/"
+    optout_method: form
+    phone: ""
+    legal_basis: UK_GDPR
+    compliant: true
+    regions: [GB]
+    notes: "UK ex-directory opt-out. UK GDPR applies."
+
+  - name: "Spokeo UK / International"
+    url: "https://www.spokeo.com/{first}-{last}"
+    optout_url: "https://www.spokeo.com/optout"
+    optout_method: form
+    phone: "(888) 906-0850"
+    legal_basis: EU_GDPR
+    compliant: true
+    regions: [EU, GB]
+    notes: "Spokeo indexes international data. GDPR erasure request alongside CCPA."
+
+  # ── CANADA ────────────────────────────────────────────────────────────────
+
+  - name: "Canada411"
+    url: "https://www.canada411.ca/search/reverse.html?stype=fl&prv=&lname={last}&fname={first}&search=Find+It"
+    optout_url: "https://www.canada411.ca/privacy/"
+    optout_method: email
+    phone: ""
+    legal_basis: CA_PIPEDA
+    compliant: true
+    regions: [CA]
+    notes: "Major Canadian directory. PIPEDA removal request. Email privacy@yp.ca."
+
+  - name: "YellowPages Canada"
+    url: "https://www.yellowpages.ca/search/si/1/{first}+{last}/Canada"
+    optout_url: "https://www.yellowpages.ca/privacy.html"
+    optout_method: email
+    phone: ""
+    legal_basis: CA_PIPEDA
+    compliant: true
+    regions: [CA]
+    notes: "PIPEDA opt-out. Same parent as Canada411."
+
+  - name: "Whitepages Canada"
+    url: "https://whitepages.ca/search?name={first}+{last}"
+    optout_url: "https://whitepages.ca/contact"
+    optout_method: form
+    phone: ""
+    legal_basis: CA_PIPEDA
+    compliant: true
+    regions: [CA]
+    notes: "Separate entity from US Whitepages. PIPEDA applies."
+
+  # ── AUSTRALIA ─────────────────────────────────────────────────────────────
+
+  - name: "White Pages Australia"
+    url: "https://www.whitepages.com.au/residential?name={first}+{last}"
+    optout_url: "https://www.whitepages.com.au/privacy/personal-information-removal"
+    optout_method: form
+    phone: ""
+    legal_basis: AU_PRIVACY_ACT
+    compliant: true
+    regions: [AU]
+    notes: "Australian residential directory. Privacy Act 1988 APP 12 applies."
+
+  - name: "TrueLocal (Australia)"
+    url: "https://www.truelocal.com.au/find/{first}-{last}"
+    optout_url: "https://www.truelocal.com.au/privacy"
+    optout_method: form
+    phone: ""
+    legal_basis: AU_PRIVACY_ACT
+    compliant: true
+    regions: [AU]
+    notes: "Australian business/people directory. OAIC complaint path."
+
+  # ── LATIN AMERICA ─────────────────────────────────────────────────────────
+
+  - name: "Tudo Sobre (Brazil)"
+    url: "https://www.tudosobre.com/{first}-{last}"
+    optout_url: "https://www.tudosobre.com/privacidade"
+    optout_method: form
+    phone: ""
+    legal_basis: BR_LGPD
+    compliant: true
+    regions: [BR]
+    notes: "Brazilian people search. LGPD Article 18 deletion rights apply. ANPD complaint path."
+
+  - name: "Paginas Blancas (Mexico)"
+    url: "https://www.paginasblancas.com.mx/es-mx/personas/{first}-{last}"
+    optout_url: "https://www.paginasblancas.com.mx/privacidad"
+    optout_method: form
+    phone: ""
+    legal_basis: MX_LFPDPPP
+    compliant: true
+    regions: [MX]
+    notes: "Mexican white pages. LFPDPPP ARCO cancellation rights apply. INAI complaint path."
+
+  # ── ASIA-PACIFIC ──────────────────────────────────────────────────────────
+
+  - name: "iPrice / SgCarMart People Search (Singapore)"
+    url: ""
+    optout_url: "https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Lodging-a-Complaint"
+    optout_method: unknown
+    phone: "(65) 6377-3131"
+    legal_basis: SG_PDPA
+    compliant: false
+    regions: [SG]
+    notes: "No standard people-search aggregator in SG. If personal data is found on any SG-based site, PDPA Section 16 withdrawal of consent and deletion applies. PDPC complaint path available."
+
+  # ── GLOBAL / MULTI-REGION ─────────────────────────────────────────────────
+
+  - name: "LinkedIn (public profile data)"
+    url: "https://www.linkedin.com/pub/dir/{first}/{last}"
+    optout_url: "https://www.linkedin.com/help/linkedin/answer/a1340507"
+    optout_method: form
+    phone: ""
+    legal_basis: EU_GDPR
+    compliant: true
+    regions: [GLOBAL]
+    notes: "LinkedIn profile data is indexed by data brokers. Adjust privacy settings at Settings > Visibility. GDPR erasure applies to EU residents."
+
+  - name: "Pipl (Global)"
+    url: ""
+    optout_url: "https://pipl.com/personal-information-removal-request"
+    optout_method: form
+    phone: ""
+    legal_basis: EU_GDPR
+    compliant: true
+    regions: [GLOBAL]
+    notes: "Global B2B identity aggregator. GDPR and CCPA erasure applies. Submit by email: privacy@pipl.com."
+
+  - name: "Spokeo (Global)"
+    url: "https://www.spokeo.com/{first}-{last}"
+    optout_url: "https://www.spokeo.com/optout"
+    optout_method: form
+    phone: "(888) 906-0850"
+    legal_basis: EU_GDPR
+    compliant: true
+    regions: [GLOBAL]
+    notes: "Indexes data globally. Use both GDPR and CCPA citation templates where applicable."
+
+  - name: "Intelius (Global exposure)"
+    url: "https://www.intelius.com/people-search/results?fn={first}&ln={last}"
+    optout_url: "https://www.intelius.com/opt-out"
+    optout_method: form
+    phone: "(888) 245-8812"
+    legal_basis: EU_GDPR
+    compliant: true
+    regions: [GLOBAL]
+    notes: "US-based but may hold international data. GDPR applies if data subjects are EU residents."

@@ -1,0 +1,46 @@
+# =============================================================================
+# privacy-guardian — notify.yaml
+# =============================================================================
+# Copy this file to notify.yaml and fill in your settings.
+# notify.yaml is gitignored — NEVER commit it.
+#
+# Mirrors the email.yml pattern used in job-scout.
+# =============================================================================
+
+# ── Scheduler ─────────────────────────────────────────────────────────────────
+# Controls what the Windows Task Scheduler trigger does.
+# See schedule.ps1 for the PowerShell registration script.
+scheduler:
+  enabled: true
+  day_of_week: "Sunday"             # Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday
+  hour: 8                           # 24h format local time
+  minute: 0
+  email_on_scheduled_run: true      # send email when Task Scheduler fires the job
+  email_on_manual_run: false        # skip email when you run ./scan.sh manually
+
+# ── Email Delivery ─────────────────────────────────────────────────────────────
+email:
+  enabled: true
+
+  # Sender display name (address comes from ~/.msmtprc account)
+  from: "Privacy Guardian"
+
+  # Subject line — supports placeholders:
+  #   {name}       → profile display name
+  #   {date}       → scan date, e.g. Sun Aug 30 2026
+  #   {found}      → number of brokers where data was found
+  #   {blocked}    → number of brokers that blocked the scan
+  subject: "Privacy Guardian · {name} · {found} found · {date}"
+
+  # Mail sending method: msmtp | sendmail
+  method: msmtp
+
+  # msmtp settings
+  msmtp:
+    config_file: "~/.msmtprc"       # standard msmtp config location
+    account: default                # account name in ~/.msmtprc
+
+  # Report format sent in the email body
+  # summary → plain-text findings summary only (recommended)
+  # full    → summary + full opt-out list inline
+  report_format: summary

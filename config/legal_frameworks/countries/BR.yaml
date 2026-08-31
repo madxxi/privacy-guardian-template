@@ -1,0 +1,31 @@
+jurisdiction: BR
+label: "Brazil — LGPD"
+country_code: BR
+
+frameworks:
+
+  - code: LGPD
+    name: "Lei Geral de Proteção de Dados (General Data Protection Law)"
+    statute: "Lei nº 13.709/2018"
+    applies_to: "Any processing of Brazilian resident data, regardless of where the processor is based"
+    rights:
+      - "Right to confirmation of processing existence"
+      - "Right to access personal data"
+      - "Right to correction of inaccurate/incomplete data"
+      - "Right to anonymization, blocking, or deletion"
+      - "Right to portability"
+      - "Right to information about sharing"
+      - "Right to revocation of consent"
+    response_deadline: "Within 15 days"
+    enforcement:
+      - agency: "Autoridade Nacional de Proteção de Dados (ANPD)"
+        url: "https://www.gov.br/anpd/pt-br"
+    damages: "Up to 2% of Brazil revenue, max R$50M per violation"
+    private_right_of_action: true
+    citation_template: >
+      Nos termos da Lei Geral de Proteção de Dados (Lei nº 13.709/2018, LGPD),
+      solicito a eliminação dos meus dados pessoais de seus sistemas. Exijo
+      resposta em até 15 dias. O descumprimento será reportado à Autoridade
+      Nacional de Proteção de Dados (ANPD).
+      [EN: Pursuant to Brazil's LGPD, I request deletion of my personal data
+      within 15 days. Non-compliance will be reported to the ANPD.]

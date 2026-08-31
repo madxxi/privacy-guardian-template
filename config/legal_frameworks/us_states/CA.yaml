@@ -1,0 +1,57 @@
+# =============================================================================
+# California State Privacy Legal Frameworks
+# =============================================================================
+
+jurisdiction: US_CA
+label: "California — State Law"
+state_code: CA
+
+frameworks:
+
+  - code: CCPA_CPRA
+    name: "California Consumer Privacy Act / California Privacy Rights Act"
+    statute: "Cal. Civ. Code § 1798.100 et seq. (CCPA); Prop. 24 (CPRA)"
+    applies_to: "For-profit businesses meeting any threshold: >$25M revenue, buys/sells data of 100K+ consumers, or derives 50%+ revenue from selling data"
+    rights:
+      - "Right to know what personal information is collected and why"
+      - "Right to delete personal information"
+      - "Right to opt out of sale or sharing of personal information"
+      - "Right to correct inaccurate personal information"
+      - "Right to limit use of sensitive personal information"
+      - "Right to non-discrimination for exercising rights"
+    response_deadlines:
+      standard: "45 days (extendable once by 45 days with notice)"
+      deletion: "45 days"
+    enforcement:
+      - agency: "California Privacy Protection Agency (CPPA)"
+        url: "https://cppa.ca.gov/regulations/consumer_rights.html"
+      - agency: "California Attorney General"
+        url: "https://oag.ca.gov/privacy/ccpa"
+    damages: "$100–$750 per consumer per incident (private action); up to $7,500 per intentional violation"
+    private_right_of_action: true
+    citation_template: >
+      Pursuant to the California Consumer Privacy Act (Cal. Civ. Code § 1798.100
+      et seq.) as amended by the California Privacy Rights Act, I am a California
+      consumer exercising my right to delete my personal information under
+      § 1798.105. You must comply within 45 days. Failure to honor this verifiable
+      consumer request may result in a complaint to the California Privacy
+      Protection Agency and civil action for statutory damages of $100–$750 per
+      violation.
+
+  - code: CA_SHINE_THE_LIGHT
+    name: "California Shine the Light Law"
+    statute: "Cal. Civ. Code § 1798.83"
+    applies_to: "Businesses sharing personal information with third parties for direct marketing"
+    rights:
+      - "Right to know which third parties received your personal information for direct marketing"
+    citation_template: >
+      Pursuant to California Civil Code § 1798.83 (Shine the Light Law), I request
+      a list of all third parties to whom you have disclosed my personal information
+      for direct marketing purposes in the past calendar year. Please respond within
+      30 days as required by statute.
+
+  - code: CA_READER_PRIVACY
+    name: "California Reader Privacy Act"
+    statute: "Cal. Civ. Code § 1798.90"
+    applies_to: "Book service providers and libraries"
+    notes: "Cite if reading history or book purchase data is found on broker sites."

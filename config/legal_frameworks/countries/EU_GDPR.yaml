@@ -1,0 +1,101 @@
+# =============================================================================
+# European Union — GDPR
+# Applies to: EU/EEA residents + anyone whose data is processed by EU-based
+# controllers, regardless of where the data subject currently lives.
+# =============================================================================
+
+jurisdiction: EU_GDPR
+label: "European Union — General Data Protection Regulation"
+region: "European Union / European Economic Area"
+country_codes: [AT, BE, BG, CY, CZ, DE, DK, EE, ES, FI, FR, GR, HR, HU,
+                IE, IT, LT, LU, LV, MT, NL, PL, PT, RO, SE, SI, SK,
+                IS, LI, NO]  # EEA
+
+frameworks:
+
+  - code: GDPR_ERASURE
+    name: "Right to Erasure (Right to be Forgotten)"
+    statute: "GDPR Article 17"
+    applies_to: "Any controller processing personal data of EU/EEA residents"
+    rights:
+      - "Right to erasure without undue delay when data is no longer necessary"
+      - "Right to erasure if consent is withdrawn and no other legal basis applies"
+      - "Right to erasure if data processed unlawfully"
+      - "Controller must notify other processors of erasure request"
+    response_deadline: "One calendar month (extendable by two months with notice)"
+    enforcement:
+      - agency: "Lead supervisory authority in controller's EU member state"
+        url: "https://edpb.europa.eu/about-edpb/about-edpb/members_en"
+    damages: "Up to €20M or 4% of global annual turnover (whichever is higher)"
+    private_right_of_action: true
+    citation_template: >
+      Pursuant to Article 17 of the General Data Protection Regulation (EU) 2016/679
+      (Right to Erasure), I hereby request the erasure of all personal data
+      concerning me that you hold, process, or have shared with third parties.
+      You are required to comply without undue delay and within one month.
+      Please confirm in writing that the erasure has been completed, including
+      notification to any third parties to whom my data was disclosed (Article 19).
+      Failure to comply will result in a complaint to the applicable supervisory
+      authority and may subject your organisation to penalties of up to €20,000,000
+      or 4% of annual global turnover.
+
+  - code: GDPR_ACCESS
+    name: "Right of Access"
+    statute: "GDPR Article 15"
+    rights:
+      - "Right to confirmation of whether personal data is processed"
+      - "Right to a copy of personal data being processed"
+      - "Right to information on processing purposes, categories, recipients, retention"
+    response_deadline: "One calendar month"
+    citation_template: >
+      Pursuant to Article 15 of the General Data Protection Regulation (EU) 2016/679,
+      I request confirmation as to whether personal data concerning me is being
+      processed, and if so, access to that data along with information regarding
+      its purposes, categories, and recipients. Please respond within one calendar month.
+
+  - code: GDPR_PORTABILITY
+    name: "Right to Data Portability"
+    statute: "GDPR Article 20"
+    rights:
+      - "Right to receive personal data in structured, machine-readable format"
+      - "Right to transmit data to another controller"
+    response_deadline: "One calendar month"
+
+  - code: GDPR_OBJECTION
+    name: "Right to Object"
+    statute: "GDPR Article 21"
+    rights:
+      - "Right to object to processing based on legitimate interests or public task"
+      - "Right to object to direct marketing (absolute right — no override)"
+    citation_template: >
+      Pursuant to Article 21 of the General Data Protection Regulation (EU) 2016/679,
+      I hereby object to the processing of my personal data, including for profiling
+      and direct marketing purposes. This objection is absolute with respect to
+      direct marketing under Article 21(3). You must cease processing immediately.
+
+  - code: GDPR_COMPLAINT
+    name: "Supervisory Authority Complaint"
+    statute: "GDPR Article 77"
+    notes: >
+      If a controller fails to respond or refuses erasure without valid grounds,
+      you have the right to lodge a complaint with the supervisory authority
+      in your member state of habitual residence or the controller's establishment.
+    key_authorities:
+      - country: "Germany"
+        authority: "BfDI (Federal Commissioner for Data Protection)"
+        url: "https://www.bfdi.bund.de/EN/Home/home_node.html"
+      - country: "France"
+        authority: "CNIL"
+        url: "https://www.cnil.fr/en/complaints"
+      - country: "Ireland"
+        authority: "Data Protection Commission (DPC)"
+        url: "https://www.dataprotection.ie/en/individuals/raising-concern-commission"
+      - country: "Spain"
+        authority: "AEPD"
+        url: "https://www.aepd.es/en/rights-and-duties/exercising-your-rights"
+      - country: "Italy"
+        authority: "Garante"
+        url: "https://www.garanteprivacy.it/en/individuals"
+      - country: "Netherlands"
+        authority: "Autoriteit Persoonsgegevens"
+        url: "https://www.autoriteitpersoonsgegevens.nl/en"

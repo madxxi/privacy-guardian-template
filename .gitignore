@@ -1,0 +1,14 @@
+# !! Never commit these !!
+config/profiles.yaml
+outputs/
+logs/
+*.db
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/

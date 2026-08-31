@@ -1,0 +1,38 @@
+jurisdiction: US_TX
+label: "Texas — State Law"
+state_code: TX
+
+frameworks:
+
+  - code: TX_TDPSA
+    name: "Texas Data Privacy and Security Act"
+    statute: "Tex. Bus. & Com. Code § 541"
+    effective: "2024-07-01"
+    applies_to: "Entities conducting business in TX and processing TX resident data (with exemptions)"
+    rights:
+      - "Right to access personal data"
+      - "Right to correct inaccuracies"
+      - "Right to delete personal data"
+      - "Right to opt out of sale, targeted advertising, and profiling"
+    response_deadlines:
+      standard: "45 days (extendable once by 45 days)"
+    enforcement:
+      - agency: "Texas Attorney General"
+        url: "https://www.texasattorneygeneral.gov/consumer-protection/privacy"
+    damages: "Civil penalty up to $7,500 per violation"
+    private_right_of_action: false
+    citation_template: >
+      Pursuant to the Texas Data Privacy and Security Act (Tex. Bus. & Com.
+      Code § 541), I am a Texas resident exercising my right to delete my
+      personal data. You must comply within 45 days. Non-compliance will be
+      reported to the Texas Attorney General, which may impose civil penalties
+      up to $7,500 per violation.
+
+  - code: TX_IDENTITY_THEFT
+    name: "Texas Identity Theft Enforcement and Protection Act"
+    statute: "Tex. Bus. & Com. Code § 521"
+    applies_to: "Businesses handling sensitive personal information of TX residents"
+    enforcement:
+      - agency: "Texas Attorney General"
+        url: "https://www.texasattorneygeneral.gov"
+    private_right_of_action: false

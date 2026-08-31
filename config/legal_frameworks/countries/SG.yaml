@@ -1,0 +1,26 @@
+jurisdiction: SG
+label: "Singapore — PDPA"
+country_code: SG
+
+frameworks:
+
+  - code: SG_PDPA
+    name: "Personal Data Protection Act"
+    statute: "PDPA 2012 (amended 2021)"
+    applies_to: "Private organisations collecting/using/disclosing personal data in Singapore"
+    rights:
+      - "Right to access personal data"
+      - "Right to correct personal data"
+      - "Right to withdraw consent"
+      - "Right to data portability (ported organisations)"
+    response_deadline: "30 business days for access/correction requests"
+    enforcement:
+      - agency: "Personal Data Protection Commission (PDPC)"
+        url: "https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Lodging-a-Complaint"
+    damages: "Financial penalties up to SGD 1M or 10% of annual local turnover"
+    private_right_of_action: true
+    citation_template: >
+      Pursuant to the Personal Data Protection Act 2012 (Singapore), I request
+      withdrawal of consent to the collection and use of my personal data and
+      request its deletion. Please respond within 30 business days. Non-compliance
+      will be reported to the Personal Data Protection Commission.

@@ -1,0 +1,32 @@
+jurisdiction: CA
+label: "Canada — PIPEDA / Bill C-27"
+country_code: CA
+
+frameworks:
+
+  - code: PIPEDA
+    name: "Personal Information Protection and Electronic Documents Act"
+    statute: "S.C. 2000, c. 5"
+    notes: "Being replaced by Consumer Privacy Protection Act (CPPA) via Bill C-27 — monitor for enactment."
+    applies_to: "Private-sector organizations collecting/using/disclosing personal info in commercial activity"
+    rights:
+      - "Right to access personal information held about you"
+      - "Right to challenge accuracy and request correction"
+      - "Right to withdraw consent (may limit ability to provide services)"
+    response_deadline: "Within a reasonable time, not to exceed 30 days"
+    enforcement:
+      - agency: "Office of the Privacy Commissioner of Canada (OPC)"
+        url: "https://www.priv.gc.ca/en/report-a-concern"
+    damages: "OPC investigation and recommendation; Federal Court may order compliance and award damages"
+    private_right_of_action: false
+    citation_template: >
+      Pursuant to the Personal Information Protection and Electronic Documents Act
+      (PIPEDA, S.C. 2000, c. 5), I withdraw my consent to the collection, use,
+      and disclosure of my personal information and request its deletion from your
+      systems. Please respond within 30 days. Non-compliance will be reported to
+      the Office of the Privacy Commissioner of Canada.
+
+  - code: CPPA_PENDING
+    name: "Consumer Privacy Protection Act (Bill C-27)"
+    statute: "Bill C-27 — pending Royal Assent"
+    notes: "When enacted, will replace PIPEDA with stronger rights including right to disposal and data portability."

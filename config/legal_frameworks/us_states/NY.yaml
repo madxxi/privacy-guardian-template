@@ -1,0 +1,41 @@
+jurisdiction: US_NY
+label: "New York — State Law"
+state_code: NY
+
+frameworks:
+
+  - code: NY_SHIELD
+    name: "New York SHIELD Act"
+    statute: "N.Y. Gen. Bus. Law § 899-bb"
+    applies_to: "Any person or business owning/licensing computerized NY resident data"
+    rights:
+      - "Requires reasonable data security safeguards"
+      - "Mandatory breach notification"
+    enforcement:
+      - agency: "New York Attorney General"
+        url: "https://ag.ny.gov/resources/individuals/internet-and-technology/data-breach"
+    damages: "Civil penalties up to $5,000 per violation"
+    private_right_of_action: false
+    citation_template: >
+      Pursuant to the New York SHIELD Act (N.Y. Gen. Bus. Law § 899-bb),
+      I demand removal of my personal information and written confirmation
+      of your data security safeguards. Non-compliance will be reported to
+      the New York Attorney General.
+
+  - code: NY_PRIVACY_ACT
+    name: "New York Privacy Act (pending full enactment)"
+    statute: "Pending — monitor for updates"
+    notes: >
+      The NY Privacy Act has been proposed and partially debated. Monitor status
+      at https://www.nysenate.gov. When enacted, it will provide CCPA-equivalent
+      rights to NY residents. Include this in demand letters when enacted.
+
+  - code: NY_IDENTITY_THEFT
+    name: "New York Identity Theft Law"
+    statute: "N.Y. Gen. Bus. Law § 380-s"
+    applies_to: "Entities that expose data enabling identity theft"
+    private_right_of_action: true
+    citation_template: >
+      Pursuant to New York General Business Law § 380-s, I demand immediate
+      removal of my personal information and reserve all rights to pursue
+      civil action for identity theft facilitation.

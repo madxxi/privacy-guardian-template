@@ -1,0 +1,95 @@
+# =============================================================================
+# Florida State Privacy Legal Frameworks
+# =============================================================================
+
+jurisdiction: US_FL
+label: "Florida — State Law"
+state_code: FL
+
+frameworks:
+
+  - code: FL_FIPA
+    name: "Florida Information Protection Act (FIPA)"
+    statute: "Fla. Stat. § 501.171"
+    applies_to: "Any covered entity that acquires, maintains, stores, or uses personal information of Floridians"
+    rights:
+      - "Right to receive breach notification within 30 days of discovery"
+      - "Attorney General may investigate and enforce"
+    enforcement:
+      - agency: "Florida Attorney General"
+        url: "https://myfloridalegal.com/contact"
+    damages: "Up to $500,000 per breach incident; $1,000/day for delayed notification"
+    private_right_of_action: false
+    citation_template: >
+      Pursuant to Florida Statute § 501.171 (Florida Information Protection Act),
+      you are a covered entity subject to Florida's data protection requirements.
+      I hereby demand written confirmation that my personal information has been
+      removed from your systems and will not be further disclosed. Non-compliance
+      may be reported to the Florida Attorney General for civil penalty enforcement.
+
+  - code: FL_PRA
+    name: "Florida Public Records Act"
+    statute: "Fla. Stat. § 119.01 et seq."
+    applies_to: "Government agencies holding public records"
+    rights:
+      - "Address confidentiality available under § 119.071 for protected occupations"
+    public_suppression_eligibility:
+      general_public: false
+      protected_classes:
+        - "Active or former law enforcement officers (and spouses/children)"
+        - "Active or former firefighters and EMTs"
+        - "Judges, magistrates, prosecutors, public defenders (and family)"
+        - "Victims of domestic violence, sexual violence, or stalking"
+        - "Human trafficking victims"
+        - "Children in DCF custody or foster care"
+    masking_process: "Submit written request to applicable agency citing Fla. Stat. § 119.071(4)"
+    citation_template: >
+      Pursuant to Florida Statute § 119.071(4), I am requesting confidentiality
+      protection for my personal information held in your public records. I meet
+      the eligibility criteria under [applicable subsection]. Please confirm
+      in writing that my address and personal information have been redacted
+      from all publicly accessible records.
+
+  - code: FL_DPPA
+    name: "Florida DPPA Implementation"
+    statute: "Fla. Stat. § 322.142"
+    applies_to: "Florida DHSMV data and any entity that received FL DMV data"
+    enforcement:
+      - agency: "Florida DHSMV"
+        url: "https://www.flhsmv.gov"
+      - agency: "Florida Attorney General"
+        url: "https://myfloridalegal.com/contact"
+    citation_template: >
+      Pursuant to Florida Statute § 322.142 and the federal Driver's Privacy
+      Protection Act (18 U.S.C. § 2721), disclosure of my Florida DMV record
+      for commercial purposes is prohibited. I demand immediate removal and
+      written confirmation. I am concurrently notifying the Florida DHSMV and
+      the Florida Attorney General of this apparent violation.
+
+  - code: FL_IDENTITY_THEFT
+    name: "Florida Identity Theft Protection"
+    statute: "Fla. Stat. § 817.568"
+    notes: >
+      If a data broker's exposure of your information has enabled identity theft,
+      Florida's identity theft statute provides criminal penalties and may support
+      civil claims. Cite this when filing police reports or pursuing civil remedies.
+    citation_template: >
+      The unauthorized exposure of my personal identification information
+      on your platform may constitute facilitation of identity fraud under
+      Florida Statute § 817.568. I demand immediate removal and reserve all
+      rights to pursue civil and criminal referrals.
+
+  - code: FL_PROP_RECORDS
+    name: "Property Records — Broward & Collier Counties"
+    statute: "Fla. Stat. § 119.071 + county ordinance"
+    notes: >
+      Property ownership records are public under Florida law. Homestead
+      confidentiality is ONLY available under § 119.071 for qualifying
+      protected occupations. Contact your attorney about eligibility.
+    agency_contacts:
+      - name: "Broward County Property Appraiser"
+        url: "https://www.bcpa.net"
+        phone: "954-357-6830"
+      - name: "Collier County Property Appraiser"
+        url: "https://www.collierappraiser.com"
+        phone: "239-252-8141"
