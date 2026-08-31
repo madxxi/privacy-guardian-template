@@ -234,16 +234,16 @@ chmod 600 ~/.msmtp-privacy.pass
 account        default
 host           smtp.gmail.com
 port           587
-from           dmynor@gmail.com
-user           dmynor@gmail.com
+from           sender_email@gmail.com
+user           sender_email@gmail.com
 passwordeval   "gpg --quiet --decrypt ~/.msmtp-gmail.gpg 2>/dev/null || cat ~/.msmtp-pass"
 
 # Privacy-guardian account — separate App Password, separate account name
 account        privacy-guardian
 host           smtp.gmail.com
 port           587
-from           dmynor@gmail.com
-user           dmynor@gmail.com
+from           sender_email@gmail.com
+user           sender_email@gmail.com
 passwordeval   "cat ~/.msmtp-privacy.pass"
 ```
 
@@ -254,7 +254,7 @@ accounts. Revoking one does not affect the other.
 
 ```bash
 echo "Subject: privacy-guardian test" | \
-    msmtp --file ~/.msmtprc --account privacy-guardian dmynor@gmail.com
+    msmtp --file ~/.msmtprc --account privacy-guardian sender_email@gmail.com
 ```
 
 If the test email arrives in your inbox, the configuration is correct.
